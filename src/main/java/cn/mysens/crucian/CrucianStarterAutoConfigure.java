@@ -6,12 +6,10 @@ import cn.mysens.crucian.config.ZkConfig;
 import cn.mysens.crucian.lock.LockTemplate;
 import cn.mysens.crucian.redis.RedisClient;
 import cn.mysens.crucian.redis.RedisReentrantLock;
-import cn.mysens.crucian.service.CrucianStarterService;
 import cn.mysens.crucian.util.RedisConfigUtil;
 import cn.mysens.crucian.zookeeper.ZkClient;
 import cn.mysens.crucian.zookeeper.ZkReentrantLock;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnSingleCandidate;
@@ -26,7 +24,6 @@ import org.springframework.context.annotation.Configuration;
  * @date 2019年02月02日<br>
  */
 @Configuration
-@ConditionalOnClass(CrucianStarterService.class)
 @EnableConfigurationProperties(CrucianStarterServiceProperties.class)
 public class CrucianStarterAutoConfigure {
 
