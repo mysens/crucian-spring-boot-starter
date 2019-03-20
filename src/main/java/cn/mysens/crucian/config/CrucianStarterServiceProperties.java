@@ -213,7 +213,7 @@ public class CrucianStarterServiceProperties {
         /**
          * 连接超时时间
          */
-        private long timeout = 10000;
+        private int timeout = 10000;
 
         public int getMinIdle() {
             return minIdle;
@@ -247,11 +247,11 @@ public class CrucianStarterServiceProperties {
             this.nodeMaxSize = nodeMaxSize;
         }
 
-        public long getTimeout() {
+        public int getTimeout() {
             return timeout;
         }
 
-        public void setTimeout(long timeout) {
+        public void setTimeout(int timeout) {
             this.timeout = timeout;
         }
     }
